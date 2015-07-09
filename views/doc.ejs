@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="rfont-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="js/editor/editor.css" rel="stylesheet" type="text/css" />
+    <link href="js/webuploader/webuploader.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://static.lufaxcdn.com/lufax-public/jquery/20140717.jquery.min.js"></script>
+</head>
+<body>
+    <% include module/head.ejs %>
+    <div class="blogbar">
+        <div class="grid">
+            <ul class="nav fn-left">
+                <li><a href="#">前端技术</a></li>
+                <li><a href="#">移动体验</a></li>
+                <li><a href="#">团队生活</a></li>
+            </ul>
+            <div class="op fn-right">
+                <input type="text" class="searchtxt" />
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="grid">
+            <div class="postlist">
+                <div class="postitem">
+                    <header class="title">
+                        <h3>[懒懒小报-外刊第12期] 2015 移动开发热点</h3>
+                    </header>
+                    <div class="desc fn-clear">
+                        <div class="fn-left">
+                            <span>作者：张三丰</span>
+                            <span>2015-05-23</span>
+                        </div>
+                        <div class="fn-right">
+                            <span>阅：88</span>
+                        </div>
+                    </div>
+                    <div class="tag">
+                        <span>标签 : jQuery、集中式、增量式</span>
+                    </div>
+                    <div class="postcontent">
+
+
+                        <p>番茄鸡蛋糖。</p>
+                        <p>本名：许露露。</p>
+                        <p>数学白痴。</p>
+                        <p>现在是平面设计师一枚。</p>
+                        <p>很小喜欢画画。</p>
+                        <p>渐渐地已经病入膏肓。</p>
+                        <p>画画是件快乐的事。</p>
+                        <p>喜欢矢量插画，纯粹简单。</p>
+                        <p>梦想是能有一天靠插画养活自己，虽然有点遥远，但我会坚持下去的。</p>
+                        <p>相对于用文字记录心情，我更多的喜欢用画画来记录。</p>
+                        <p>想象着有一天出国，不会说外语怕什么，外国人也能看得懂画啊。</p>
+
+                    </div>
+                </div>
+                <div>
+                    <textarea class="editor"></textarea>
+                </div>
+            </div>
+            <div class="slidebox">
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/markdownit.js"></script>
+    <script type="text/javascript" src="js/editor/editor.js"></script>
+    <script type="text/javascript" src="js/webuploader/webuploader.withoutimage.js"></script>
+    <script type="text/javascript" src="js/editor/ext.js"></script>
+    <script>
+        $(function(){
+            $('textarea.editor').each(function() {
+                var editor = new Editor({
+                    status: []
+                });
+                var $el = $(this);
+
+                editor.render(this);
+                //绑定editor
+                $(this).data('editor', editor);
+            })
+        })
+    </script>
+</body>
+</html>

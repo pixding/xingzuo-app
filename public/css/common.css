@@ -1,0 +1,49 @@
+.grid{ width: 1080px; margin: auto;}
+
+/*head top*/
+.topbar{
+    height: 80px;
+    background: #fff;position: relative;z-index:1;
+    box-shadow: 0 0 4px rgba(0,0,0,.2);}
+.logobox{ height: 50px; line-height: 50px; margin-top: 15px;}
+.logo{ font-size: 36px; font-family: monospace; float: left; height: 50px; font-weight: bold; color:#f60; line-height: 50px;}
+.logobox .slide{ padding: 0 12px; color:#ccc;}
+.logobox .desc{ line-height: 50px; color:#999;}
+.topbar .nav{ margin-top: 20px;}
+.topbar .nav li{ float: left; padding: 0 20px; height:40px; line-height: 40px;}
+.topbar .nav li a{font-size: 14px; display: block; color:#333;}
+.topbar .nav li a:hover{ color:#f00;}
+.topbar .nav li.active{ border-bottom: 2px solid #f00; height:40px; line-height: 40px;}
+
+.blogbar{   height: 74px;
+    border-bottom: 1px solid #f2f2f2;
+    background: #fafafa; }
+.blogbar .nav{margin-bottom: 0px;}
+.blogbar .nav li{ float: left; padding: 0 15px; line-height: 74px; font-size: 14px;}
+.blogbar .op{ padding: 20px 0 0 0;}
+.blogbar .searchtxt{ padding: 8px 8px; border:none; background: #fff; width: 220px; border:1px solid #efefef;}
+
+.breadbox{ padding: 10px 0;}
+
+
+/**/
+.slidebar{ height: 250px; margin: 20px 0;}
+.slidebar .item img{ width: 1080px; height: 250px;}
+/*main*/
+.postlist{ width: 720px;}
+.postitem{ padding: 5px 5px 10px 5px; border-bottom: 1px dashed #e3efc6;}
+.postitem .title{ line-height: 24px; padding: 5px 0; font-size: 16px; color:#333;}
+.postitem .title a{ color:#0066cc;}
+.postitem .desc{  line-height: 22px; color:#666;}
+.postitem .tag{ line-height: 22px; color:#666;}
+
+.slidebox{ width: 320px; float: right;}
+.slideitem{ margin-bottom: 10px;}
+.slideitem .slide-top{ line-height: 24px; padding:0 10px 10px 10px; font-size: 14px; color:#f60; border-bottom: 1px dashed #ddd;}
+.slideitem .slide-con{ padding: 5px 5px;}
+.slideitem .slide-con li{line-height: 24px; list-style:disc inside;}
+
+
+/*底部*/
+.footer{ border-top: 1px solid #ddd; margin-top: 40px; background: #efefef; padding: 20px 0; }
+.footer .orange{ font-size:14px; color:#f60; margin-right:20px;}

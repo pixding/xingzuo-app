@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="rfont-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="/js/editor/editor.css" rel="stylesheet" type="text/css" />
+    <link href="/js/webuploader/webuploader.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://static.lufaxcdn.com/lufax-public/jquery/20140717.jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <% include module/head.ejs %>
+    <div class="blogbar">
+        <div class="grid">
+            <ul class="nav fn-left">
+                <li><a href="#">前端技术</a></li>
+                <li><a href="#">移动体验</a></li>
+                <li><a href="#">团队生活</a></li>
+            </ul>
+            <div class="op fn-right">
+                <input type="text" class="searchtxt" />
+            </div>
+        </div>
+    </div>
+    <style>
+
+        .postform{box-shadow: 0px 0px 2px #ccc; padding: 15px 0;}
+        .form-control{ padding: 5px 0;}
+        .form-control .lab{ display: block; line-height: 36px; font-size: 12px; color:#666; float:left; width: 140px; text-align: right;}
+        .form-control .con{ float:left; line-height: 36px; font-size: 12px;}
+        .form-control .con select{height: 30px; background: #fff; line-height: 30px; border:1px solid #ccc; min-width: 120px;}
+        .form-control .con .txt{ height:30px; width: 440px; padding:0 3px; border: 1px solid #ccc;}
+        .editorbox{ padding: 10px;}
+        .postform .opbox{ padding: 5px 20px;}
+
+
+    </style>
+    <div class="breadbox">
+        <div class="grid">
+            <a href="/">首页</a> &gt; <span>发布话题</span>
+        </div>
+    </div>
+    <div class="fn-clear">
+        <div class="grid">
+
+            <div class="postlist postform fn-left" >
+                <form>
+                    <div>
+                        <div class="form-control fn-clear">
+                            <label class="lab">选择板块：</label>
+                            <div class="con">
+                                <select>
+                                    <option>板块1</option>
+                                    <option>板块1</option>
+                                    <option>板块1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-control fn-clear">
+                            <label class="lab">Title：</label>
+                            <div class="con">
+                                <input type="text" class="txt" placeholder="标题长度10字以上" />
+                            </div>
+                        </div>
+                        <div class="form-control fn-clear">
+                            <label class="lab">Tags：</label>
+                            <div class="con">
+                                <input type="text" class="txt" placeholder="标签使用逗号隔开" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editorbox">
+                        <textarea class="editor"></textarea>
+                    </div>
+                    <div class="opbox">
+                        <a class="btn btn-primary">保存</a>
+                    </div>
+                </form>
+
+            </div>
+            <div class="slidebox">
+                <div class="slideitem">
+                    <div class="slide-top">
+                        <span>Markdown 语法参考</span>
+                    </div>
+                    <div class="slide-con">
+                        <ul>
+                            <li># 这是一级标题</li>
+                            <li>**粗体**</li>
+                            <li>`console.log('行内代码')`</li>
+                            <li>```js\n code \n``` 标记代码块</li>
+                            <li>[内容](链接)</li>
+                            <li>![文字说明](图片链接)</li>
+                            <li><a href="#" target="_blank">Markdown 文档</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include module/foot.ejs %>
+    <script type="text/javascript" src="/js/markdownit.js"></script>
+    <script type="text/javascript" src="/js/editor/editor.js"></script>
+    <script type="text/javascript" src="/js/webuploader/webuploader.withoutimage.js"></script>
+    <script type="text/javascript" src="/js/editor/ext.js"></script>
+    <script>
+        $(function(){
+            $('textarea.editor').each(function() {
+                var editor = new Editor({});
+                var $el = $(this);
+                editor.render(this);
+                //绑定editor
+                $(this).data('editor', editor);
+            })
+        })
+    </script>
+</body>
+</html>

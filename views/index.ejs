@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://static.lufaxcdn.com/lufax-public/jquery/20140717.jquery.min.js"></script>
+</head>
+<body>
+    <% include module/head.ejs %>
+    <div class="blogbar" style="display: none;">
+        <div class="grid">
+            <ul class="nav fn-left">
+                <li><a href="#">前端技术</a></li>
+                <li><a href="#">移动体验</a></li>
+                <li><a href="#">团队生活</a></li>
+            </ul>
+            <div class="op fn-right">
+                <input type="text" class="searchtxt" />
+            </div>
+        </div>
+    </div>
+
+    <div class="slidebar">
+        <div class="grid">
+            <div class="item">
+                <img src="https://static.lufaxcdn.com/uic/html/images/uecenter/a157b0fb0154.bg1.jpg">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .hotpost{}
+        .sileitem{ margin-bottom: 10px;}
+        .sileitem .top{ height: 36px;background: #fafafa; font-size:14px; line-height: 36px; border-bottom: 1px solid #ddd;}
+        .sileitem .top h3{ float: left; padding-left: 8px; color:#555;}
+        .sileitem .dhbox{ background: #f0f1f1; line-height: 24px; padding: 10px;}
+        .sileitem .dhbox .dhcate{float: left; font-size:12px; color:#ad6704; width: 50px; text-align: left;}
+        .sileitem .dhbox .dhlist{  margin-left: 50px; }
+        .sileitem .dhbox .dhlist a{ color:#333; padding: 0 5px; word-break: break-all; white-space: nowrap;}
+        .sileitem .dhbox .dhlist a:hover{ text-decoration: underline;}
+        .sileitem .dhbox:nth-child(2n){ background:#f4f6f9;}
+    </style>
+    <div class="content fn-clear">
+        <div class="grid">
+            <div class="postlist fn-left">
+                <article class="postitem">
+                    <header class="title">
+                        <a href="#">[懒懒小报-外刊第12期] 2015 移动开发热点</a>
+                    </header>
+                    <div class="desc fn-clear">
+                        <div class="fn-left">
+                            <span>作者：张三丰</span>
+                            <span>2015-05-23</span>
+                        </div>
+                        <div class="fn-right">
+                            <span>阅：88</span>
+                        </div>
+                    </div>
+                    <div class="tag">
+                        <span>标签 : jQuery、集中式、增量式</span>
+                    </div>
+                </article>
+
+            </div>
+            <div class="slidebox fn-right">
+                <div class="sileitem">
+                    <div class="top"><h3>快捷导航</h3></div>
+                    <div class="dhbox fn-clear">
+                        <span class="dhcate">项目</span>
+                        <div class="dhlist">
+                            <a target="_blank" href="#">jira</a>
+                            <a target="_blank" href="#">demo</a>
+                            <a target="_blank" href="#">视觉</a>
+                            <a target="_blank" href="#">WCM工具</a>
+                            <a target="_blank" href="#">发布流程</a>
+                        </div>
+                    </div>
+                    <div class="dhbox  fn-clear">
+                        <span class="dhcate">工具</span>
+                        <div class="dhlist">
+                            <a target="_blank" href="#">前端规范</a>
+                            <a target="_blank" href="#">github使用</a>
+                            <a target="_blank" href="#">gitlab</a>
+                            <a target="_blank" href="#">测试移交</a>
+                            <a target="_blank" href="#">新人指南</a>
+                        </div>
+                    </div>
+                    <div class="dhbox  fn-clear">
+                        <span class="dhcate">团队</span>
+                        <div class="dhlist">
+                            <a target="_blank" href="#">pixding</a>
+                            <a target="_blank" href="#">寸小志</a>
+                            <a target="_blank" href="#">王大琼</a>
+                            <a target="_blank" href="#">刘小展</a>
+                            <a target="_blank" href="#">汤米ben</a>
+                        </div>
+                    </div>
+
+                    <div class="dhbox  fn-clear">
+                        <span class="dhcate">金融网</span>
+                        <div class="dhlist">
+                            <a target="_blank" href="#">陆金所</a>
+                            <a target="_blank" href="http://www.xiaoniu88.com/">小牛在线</a>
+                            <a target="_blank" href="http://www.ppmoney.com/">PPmoney</a>
+                            <a target="_blank" href="http://www.yooli.com/">有利网</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <% include module/foot.ejs %>
+</body>
+</html>
